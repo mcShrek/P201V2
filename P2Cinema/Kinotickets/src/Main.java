@@ -11,9 +11,9 @@ public class Main {
         scanner = new Scanner(System.in);
         data = new Database();
         data.loadMovies();
+        data.loadTarifs();
         ui = new UserInterface(scanner,data);
         ai = new AdminInterface(scanner,data);
-
 
     }
 
@@ -24,9 +24,9 @@ public class Main {
 
     public void whichUser() {
         while(true){
-        System.out.print("For User interface type 1\n" +
-                        "for AdminInterface please type 2\n" +
-                        " 0 to stop programm\n");
+        System.out.print("1 -- User Interface\n" +
+                        "2 -- Admin Interface\n" +
+                        " 0 -- Stop programm\n");
 
         int input = HelpMethods.askForInt(scanner);
 

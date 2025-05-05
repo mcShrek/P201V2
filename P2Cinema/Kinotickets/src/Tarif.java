@@ -1,16 +1,17 @@
 public abstract class Tarif {
-    private int price;
 
-    protected Tarif(int price) {
-
-        this.price = price;
+    private double pricePerc;
+    protected Tarif(double pricePerc) {
+        this.pricePerc = pricePerc;
     }
+    public abstract String getName();
 
-   public String getName(){
-        return "test";
-   };
 
-    public int getPrice() {
-        return price;
+
+    public double getPricePerc() {
+        return pricePerc;
+    }
+    public void setPricePerc(double pricePerc) {
+        this.pricePerc = pricePerc;
     }
 }

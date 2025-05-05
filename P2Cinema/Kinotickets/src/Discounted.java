@@ -1,15 +1,14 @@
 public class Discounted extends Tarif{
 
-    protected Discounted(int price) {
 
-        super(price);
+    protected Discounted() {
+
+        super(0.7);
     }
 
     public String getName(){
         return "Discounted";
     }
 
-    public int getPrice() {
-        return super.getPrice() ;
-    }
+
 }

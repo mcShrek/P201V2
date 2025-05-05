@@ -1,5 +1,8 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 public class Show {
 
@@ -31,7 +34,7 @@ public class Show {
     }
     @Override
     public String toString() {
-        return "Name: " + movie.getMovieName() + "  --  Start time(entrance starts 10min before): " + getStartTime() + "  --  Duration: " + movie.getDuration()+ " min\n";
+        return   movie.getMovieName() + " -- Date: " + date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.ENGLISH) + " " +  date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "  --  Start time(entrance starts 10min before): " + getStartTime() + "  --  Duration: " + movie.getDuration()+ " min\n";
 
     }
 }

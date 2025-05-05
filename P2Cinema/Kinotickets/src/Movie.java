@@ -5,9 +5,9 @@ public class Movie {
     private String movieName;
     private String shortName;
     private int duration;
-    private int price;
+    private double price;
 
-    public Movie(String movieName, String shortName, int duration, int price) {
+    public Movie(String movieName, String shortName, int duration, double price) {
         this.movieName = movieName;
         this.shortName = shortName;
         this.duration = duration;
@@ -27,7 +27,7 @@ public class Movie {
         return duration;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
     public void setPrice(int price){
@@ -35,7 +35,7 @@ public class Movie {
     }
     @Override
     public String toString() {
-        return movieName + " (" + shortName + "), " + duration + " min, " + price + " €";
+        return movieName + " (" + shortName + "), " + duration + " min, " + String.format("%.2f€", price);
     }
 
 }

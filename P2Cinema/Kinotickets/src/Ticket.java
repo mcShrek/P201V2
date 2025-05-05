@@ -14,19 +14,24 @@ public class Ticket {
         this.tarif = tarif;
     }
 
-    @Override
-    public String toString() {
-        return ("Ticket\n" + show.toString() +
-                "Room: " + room.getRoomNumber() + "\n"
-                + "Tarif: " + tarif.getName()+ "\n" +
-                "Price: " + isThursday(tarif.getPrice()));
-    }
-
     public double isThursday(double price) {
         if(show.getDate().getDayOfWeek().getValue() == 4) {
             return Math.round((price * 0.7)*100.0)/100.0;
         }
-        return price;
+        return Math.round(price * 100.0) / 100.0;
     }
+
+    @Override
+    public String toString() {
+        double normalPrice = show.getMovie().getPrice();
+        double tarifPerc = tarif.getPricePerc();
+        double tarifPrice = normalPrice * tarifPerc;
+        double finalPrice = isThursday(tarifPrice);
+        return ("Ticket\n" + show.toString() +
+                "Room: " + room.getRoomNumber() + "\n"
+                + "Tarif: " + tarif.getName()+ "\n" +
+                "Price: " + String.format("%.2f€", finalPrice));
+    }
+
 
 }

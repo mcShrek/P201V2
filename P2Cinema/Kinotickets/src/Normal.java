@@ -1,16 +1,14 @@
 public class Normal extends Tarif {
 
-    protected Normal(int price) {
-        super(price);
+    private double pricePerc;
+
+    protected Normal() {
+        super(1.0);
+
     }
 
 
     public String getName() {
-        return "normal";
-    }
-
-    @Override
-    public int getPrice() {
-        return super.getPrice() * 2;
+        return "Normal";
     }
 }

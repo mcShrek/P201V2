@@ -1,8 +1,8 @@
 public class TarifFactory {
-   public static Tarif createTarif(String type, int price) {
+   public static Tarif createTarif(String type) {
         return switch(type.trim().toLowerCase()) {
-            case "discounted" -> new Discounted(price);
-            case "normal" -> new Normal(price);
+            case "discounted" -> new Discounted();
+            case "normal" -> new Normal();
             default -> throw new IllegalArgumentException();
         };
 

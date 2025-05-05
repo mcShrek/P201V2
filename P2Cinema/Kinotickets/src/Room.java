@@ -10,14 +10,6 @@ public class Room  implements Comparable<Room>{
         this.shows = new ArrayList<>();
     }
 
-    public void addShow(Show show) {
-        shows.add(show);
-    }
-
-    public List<Show> getShows() {
-        return shows;
-    }
-
     public int getRoomNumber() {
         return roomNumber;
     }
