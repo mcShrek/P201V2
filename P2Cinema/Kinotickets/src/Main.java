@@ -24,9 +24,10 @@ public class Main {
 
     public void whichUser() {
         while(true){
-        System.out.print("1 -- User Interface\n" +
-                        "2 -- Admin Interface\n" +
-                        " 0 -- Stop programm\n");
+        System.out.print("0 -- Stop programm\n" +
+                        "1 -- User Interface\n" +
+                        "2 -- Admin Interface\n"
+                        );
 
         int input = HelpMethods.askForInt(scanner);
 

@@ -15,6 +15,7 @@ public class Movie {
     }
 
     public String getMovieName() {
+
         return movieName;
     }
 
@@ -24,13 +25,16 @@ public class Movie {
     }
 
     public int getDuration() {
+
         return duration;
     }
 
     public double getPrice() {
+
         return price;
     }
     public void setPrice(int price){
+
         this.price = price;
     }
     @Override

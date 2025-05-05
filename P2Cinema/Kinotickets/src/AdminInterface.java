@@ -112,7 +112,8 @@ public class AdminInterface {
     }
 
     public boolean checkPause(Show show1, Show show2){
-        if (show1.getRoom().getRoomNumber() != show2.getRoom().getRoomNumber()) return false;
+        if (show1.getRoom().getRoomNumber() != show2.getRoom().getRoomNumber())
+            return false;
 
         LocalDateTime start1 = LocalDateTime.of(show1.getDate(), show1.getStartTime());
         LocalDateTime end1 = start1.plusMinutes(show1.getMovie().getDuration() + 15);
